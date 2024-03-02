@@ -1,0 +1,121 @@
+@use '../util';
+
+.header{
+
+    //overlay
+.overlay {
+    position:fixed;
+    top:100px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    background-image: linear-gradient(var(--dark-blue),transparent);
+}
+
+//hamburger open styles
+&.open{
+
+    .overlay{
+        display: block;
+        
+    }
+
+    .header_menu{
+
+    > span:first-child {
+        transform: rotate(45deg);
+
+    }
+
+    > span:nth-child(2){
+        opacity: 0;
+
+    }
+    > span:last-child{
+        transform: rotate(-45deg);
+    }
+  }
+}
+
+//nav element
+    nav{
+        padding: 1.0625rem 1.5rem;
+        
+    }
+//logo of tecttrove
+    &_logo{
+
+        img {
+
+             width:70px;
+             height:70px;
+        }
+
+    }
+//menu bars
+    &_menu{
+        > span{
+            display: block;
+            width:26px;
+            height:3px;
+            background-color:var(--dark-blue);
+            transform-origin: 2px 2px;
+            
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+
+        
+    }
+//hamburger links
+    &_links {
+
+        a {
+            position: relative;
+            font-size: 20px;
+            color: var(--grayish-blue);
+            transition: color 150ms ease-in-out;
+           
+
+            &:not(:last-child){ //space between
+                margin-right: 30px;
+            }
+
+            &::before { //green line effect
+                content: "";
+                display: block;
+                position: absolute;
+                height:5px;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                border-radius: 20px;
+                background: var(--lime-green);
+                opacity: 0;
+                transition: opacity 150ms ease-in-out;
+            }
+
+            &:hover{
+                color: var(--dark-blue); //hover effect
+
+                &::before{
+                 opacity: 1;//below green line effect
+                }
+            }
+        }
+    }
+
+    &_gculogo {
+
+        img {
+                width:auto;
+                height:40px;
+            }
+    }
+
+
+}
+
+
+
