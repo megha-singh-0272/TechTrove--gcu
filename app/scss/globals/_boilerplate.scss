@@ -19,6 +19,13 @@ body
     font-family: 'Inter', sans-serif;;
     font-size: 10px;
     line-height: 1.3;
+    font-weight: 300;
+
+    //no scrolling 
+    &.noscroll {
+        overflow: hidden;
+
+    }
 }
 
 //styles for anchor links

@@ -12,11 +12,19 @@
     background-image: linear-gradient(var(--dark-blue),transparent);
 }
 
-//hamburger open styles
+nav{
+    position: relative;
+    background-color: var(--white);
+    padding: 1.0625rem 1.5rem;
+}
+
+//hamburger open styles<a href=""></a>
 &.open{
 
     .overlay{
         display: block;
+        opacity: 0;
+        top:0px;
         
     }
 
@@ -37,18 +45,13 @@
   }
 }
 
-//nav element
-    nav{
-        padding: 1.0625rem 1.5rem;
-        
-    }
 //logo of tecttrove
     &_logo{
 
         img {
 
-             width:70px;
-             height:70px;
+             width:auto;
+             height:60px;
         }
 
     }
@@ -67,6 +70,24 @@
         }
 
         
+    }
+
+//hamburger menu for mobile
+    .header_mobile_menu{
+        position: absolute;
+        width:calc(100% - 3rem);
+        background-color: var(--white);
+        padding: 26px;
+        margin: 15px 1.5rem;
+        border-radius: 6px;
+
+        a{
+            color: var(--dark-blue);
+            padding:10px;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+        }
     }
 //hamburger links
     &_links {
@@ -105,7 +126,7 @@
             }
         }
     }
-
+//gcu logo navbar
     &_gculogo {
 
         img {
@@ -116,6 +137,3 @@
 
 
 }
-
-
-
