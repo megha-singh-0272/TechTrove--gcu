@@ -28,6 +28,20 @@ body
     }
 }
 
+//prefered spacing
+h1,h2,h3{
+    margin-top: 5px;
+}
+
+//spacing
+.container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+
+}
+
 //styles for anchor links
 a, a:visited, a:hover{
     text-decoration: none;

@@ -24,11 +24,13 @@ nav{
     .overlay{
         display: block;
         opacity: 0;
-        top:0px;
+        top:80px;
+        z-index: 1;
         
     }
 
     .header_menu{
+        
 
     > span:first-child {
         transform: rotate(45deg);
@@ -80,6 +82,7 @@ nav{
         padding: 26px;
         margin: 15px 1.5rem;
         border-radius: 6px;
+        z-index: 2;
 
         a{
             color: var(--dark-blue);
