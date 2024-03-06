@@ -63,6 +63,7 @@
 
         h4 {
             font-size: 17px;
+            color: var(--grayish-blue);
 
             @include util.breakpoint-up(large){
                 font-size: 25px;

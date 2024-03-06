@@ -1,13 +1,25 @@
 /* Styles for the slideshow container */
+@use '../util';
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 
     > h1{
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
         color: var(--dark-blue);
+
+        @include util.breakpoint-up(medium){
+            font-size: 40px;
+        }
+
+        @include util.breakpoint-up(large){
+            font-size: 60px;
+        }
+
+
     }
 }
 

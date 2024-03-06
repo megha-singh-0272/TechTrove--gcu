@@ -1,0 +1,117 @@
+@use '../util';
+
+//whole features section
+.features{
+    padding-right:50px;
+    padding-left: 50px;
+   // background-color: var(--light-grayish-blue);
+    text-align: center;
+
+    @include util.breakpoint-up(medium){
+        text-align: left;
+    }
+
+    @include util.breakpoint-up(large){
+        padding-left: 60px;
+        padding-right: 60px;
+        text-align: left;
+    }
+
+//features parent 
+    &__parent{
+
+        @include util.breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    }
+
+//features points
+    &__item{
+        padding: 20px;
+
+
+        @include util.breakpoint-up(medium){
+            flex: 50%; // defaultwidth
+        }
+
+        @include util.breakpoint-up(large){
+            flex: 1;  //for same width and same row
+        }
+
+    }
+
+//features icon inside items
+    &__icon{
+
+
+        img {
+            width: 50px;
+            height:50px;
+
+            @include util.breakpoint-up(medium){
+                width:auto;
+                height:70px;
+            }          
+
+            @include util.breakpoint-up(large){
+                width:auto;
+                height:100px;
+            }
+        }
+    }
+
+//features title inside items
+    &__title{
+
+        h6 {
+            color: var(--dark-blue);
+            font-size: 15px;
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        @include util.breakpoint-up(medium){
+            h6 {
+            font-size: 18px;
+            margin: 8px 0;
+            }
+
+        }
+
+        @include util.breakpoint-up(large){
+            h6 {
+            font-size: 20px;
+            margin: 10px 0;
+            }
+
+        }
+
+
+    }
+
+//features description inside items
+    &__description{
+        p {
+            font-size: 12px;
+            color: var(--grayish-blue);
+
+        }
+
+        @include util.breakpoint-up(medium){
+            p {
+                font-size:15px;
+            }
+        }
+
+        @include util.breakpoint-up(large){
+            p {
+                font-size:18px;
+            }
+        }
+
+    }
+
+
+}
