@@ -1,0 +1,122 @@
+@use '../util';
+
+.articles {
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+    font-size: 18px;
+    color: var(--dark-blue);
+    
+    @include util.breakpoint-up(medium){
+        font-size: 25px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @include util.breakpoint-up(large){
+        font-size: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+    
+    }
+
+
+}
+
+.article {
+
+   // &_content {
+
+    //}
+
+    &_grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap:50px;
+        
+
+        @include util.breakpoint-up(medium){
+            grid-template-columns: repeat(2,1fr); //repeat(no.ofcolumn , width)
+        }
+
+        @include util.breakpoint-up(large){
+            grid-template-columns: repeat(4,1fr);
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+        }
+
+    }
+
+    &_item{
+        background-color: var(--white);
+        border-radius: 10px;
+        text-align: left;
+        overflow: hidden;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.3);//horizontalPosition VerticalPosition Spread color 
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+           transform: scale(1.05);
+        }
+
+
+    }
+
+    &_image{
+        height:200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include util.breakpoint-up(medium){
+            height:220px;
+        }
+
+        @include util.breakpoint-up(large){
+            height:250px;
+        }
+
+    }
+
+    &_text{
+        padding:25px;
+
+    }
+
+    &_title{
+        h5 {
+            font-size: 18px;
+            margin: 0px;
+
+            @include util.breakpoint-up(medium){
+                font-size: 20px;
+            }
+
+            @include util.breakpoint-up(large){
+                font-size: 22px;
+            }
+
+        }
+    }
+
+    &_description{
+        p {
+            font-size: 13px;
+            margin: 0px;
+            padding-top:10px ;
+            color: var(--grayish-blue);
+
+            @include util.breakpoint-up(medium){
+                font-size: 15px;
+            }
+
+            @include util.breakpoint-up(large){
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+
+}

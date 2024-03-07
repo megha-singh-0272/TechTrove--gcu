@@ -1,10 +1,11 @@
 @use '../util';
 
+
 //whole features section
 .features{
-    padding-right:50px;
-    padding-left: 50px;
-   // background-color: var(--light-grayish-blue);
+    padding-right:12px;
+    padding-left: 12px;
+    background-color: var(--light-grayish-blue);
     text-align: center;
 
     @include util.breakpoint-up(medium){
@@ -25,6 +26,41 @@
             flex-wrap: wrap;
         }
 
+    }
+
+    &__text{
+        text-align: left;
+        h5 {
+            font-size: 30px;
+            margin: 0;
+            color:var(--dark-blue);
+
+            @include util.breakpoint-up(medium){
+                font-size: 40px;
+
+            }
+
+            @include util.breakpoint-up(large){
+                font-size: 60px;
+            }
+
+
+        }
+        p {
+            font-size: 15px;
+            color: var(--dark-blue);
+
+            @include util.breakpoint-up(medium){
+                font-size: 18px;
+            }
+
+            @include util.breakpoint-up(large){
+                font-size: 22px;
+                margin-right: 50px;
+            }
+        }
+            
+        
     }
 
 //features points
@@ -94,20 +130,20 @@
 //features description inside items
     &__description{
         p {
-            font-size: 12px;
+            font-size: 15px;
             color: var(--grayish-blue);
 
         }
 
         @include util.breakpoint-up(medium){
             p {
-                font-size:15px;
+                font-size:18px;
             }
         }
 
         @include util.breakpoint-up(large){
             p {
-                font-size:18px;
+                font-size:20px;
             }
         }
 
@@ -115,3 +151,4 @@
 
 
 }
+
